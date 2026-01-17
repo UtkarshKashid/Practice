@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call Cards Stack</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Add New Note Button -->
+    <button id="addBtn">+ Add Note</button>
+
+    <!-- Form Overlay -->
+    <div id="formContainer" class="form-container">
+        <div class="call-form">
+            <h2>Create New Call Note</h2>
+            <form id="callForm">
+                <label for="imageUrl">Image URL</label>
+                <input type="text" id="imageUrl" placeholder="Enter image URL">
+
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" placeholder="Enter full name">
+
+                <label for="homeTown">Home Town</label>
+                <input type="text" id="homeTown" placeholder="Enter home town">
+
+                <label for="purpose">Purpose</label>
+                <input type="text" id="purpose" placeholder="Enter purpose">
+
+                <label>Category</label>
+                <div class="categories">
+                    <label class="category emergency">
+                        <input type="radio" name="category" value="emergency"> Emergency
+                    </label>
+                    <label class="category important">
+                        <input type="radio" name="category" value="important"> Important
+                    </label>
+                    <label class="category urgent">
+                        <input type="radio" name="category" value="urgent"> Urgent
+                    </label>
+                    <label class="category norush">
+                        <input type="radio" name="category" value="norush"> No Rush
+                    </label>
+                </div>
+
+                <button type="submit" class="create-note-btn">Create Note</button>
+            </form>
+            <button id="closeBtn" class="close-btn">Close</button>
+        </div>
+    </div>
+
+    <!-- Main Layout -->
+    <div class="main-layout">
+        <div class="left-side">
+            <button id="up" class="circle-btn">↑</button>
+            <button id="down" class="circle-btn">↓</button>
+        </div>
+
+        <div class="stack">
+            <!-- Dynamically generated cards will appear here -->
+        </div>
+
+        <div class="right-side">
+            <div class="dot black"></div>
+            <div class="dot purple"></div>
+            <div class="dot orange"></div>
+            <div class="dot teal"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
